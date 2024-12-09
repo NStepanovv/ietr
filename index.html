@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное руководство: CTmap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        Интерактивное руководство: CTmap
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" data-section="diagnostics-overview">Диагностика неисправностей</a></li>
+                <li><a href="#" data-section="maintenance">Регламентные работы</a></li>
+                <li><a href="#" data-section="reference-info">Справочная информация</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <section id="diagnostics-overview">
+                <h1>Диагностика неисправностей</h1>
+                <p>Выберите неисправность из списка ниже, чтобы приступить к диагностике:</p>
+                <div class="issues-list">
+                    <button class="issue-button" data-issue="Не открывается страница веб-приложения">
+                        Не открывается страница веб-приложения
+                    </button>
+                    <button class="issue-button" data-issue="Не отображается карта с данными КТ">
+                        Не отображается карта с данными КТ
+                    </button>
+                    <button class="issue-button" data-issue="Нет возможности загрузить данные">
+                        Нет возможности загрузить данные
+                    </button>
+                    <button class="issue-button" data-issue="Превышен размер загружаемого файла">
+                        Превышен размер загружаемого файла
+                    </button>
+                </div>
+            </section>
+            <section id="diagnostic-dialog" style="display: none;">
+                <div id="dialog-content"></div>
+            </section>
+            <section id="maintenance" style="display: none;">
+                <div id="maintenance-section">
+                    <h2>Регламентные работы</h2>
+                    <table id="maintenance-table" border="1">
+                        <thead>
+                            <tr>
+                                <th style="width: 200px;">Название регламентной работы</th>
+                                <th style="width: 400px;">Периодичность</th>
+                                <th style="width: 200px;">Инструкция</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Содержимое будет генерироваться через JavaScript -->
+                        </tbody>
+                    </table>
+                    <div id="instruction-details" style="display: none; margin-top: 20px;">
+                        <h3 id="instruction-title"></h3>
+                        <ul id="instruction-steps"></ul>
+                        <div id="instruction-images"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="reference-info" style="display: none;">
+                <h2>Справочная информация о веб-приложении CTmap</h2>
+                <article>
+                    <h3>1. О приложении</h3>
+                    <p>
+                        CTmap — это онлайн-каталог данных компьютерной томографии образцов из различных направлений исследований, 
+                        исключая медицинскую тематику. Платформа предоставляет удобный доступ к информации о физических, 
+                        химических и структурных характеристиках образцов.
+                    </p>
+                    <p>
+                        Уникальная особенность CTmap — это интеграция с интерактивной картой, на которой отображаются доступные 
+                        данные. Также пользователи могут просматривать информацию в виде таблиц или списков.
+                    </p>
+                    <img src="/assets/images/ctmap_main.png" alt="Общий вид CTmap" style="max-width: 100%; margin: 20px 0;">
+            
+                    <h3>2. Основные разделы</h3>
+                    <ul>
+                        <li>
+                            <strong>Науки о Земле</strong>: 
+                            Фокусируется на образцах, связанных с геологическими и минералогическими исследованиями. 
+                            Доступны фильтры по типам пород, местам сбора и геохимическим характеристикам.
+                        </li>
+                        <li>
+                            <strong>Науки о жизни</strong>: 
+                            Содержит данные о биологических образцах, включая кости, кораллы, семена и листья. 
+                            Поддерживаются фильтры по видам образцов, их происхождению и методам подготовки.
+                        </li>
+                        <li>
+                            <strong>Социальные науки</strong>: 
+                            Раздел ориентирован на данные о культурных артефактах, археологических находках и исторических образцах. 
+                            Пользователи могут фильтровать данные по эпохам, регионам и материалам.
+                        </li>
+                        <li>
+                            <strong>Материаловедение</strong>: 
+                            Включает информацию о современных материалах, таких как композиты, металлы, сплавы и керамика. 
+                            Доступны фильтры по составу, механическим свойствам и методам анализа.
+                        </li>
+                    </ul>
+                    <img src="/assets/images/ctmap_categories.png" alt="Разделы CTmap" style="max-width: 100%; margin: 20px 0;">
+            
+                    <h3>3. Как найти нужные данные</h3>
+                    <p>
+                        Для поиска данных пользователь может использовать:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Интерактивная карта:</strong> 
+                            На карте отображаются местоположения образцов. Наведите на точку, чтобы увидеть краткую информацию, 
+                            или нажмите, чтобы перейти к подробной карточке образца.
+                        </li>
+                        <li>
+                            <strong>Таблица:</strong> 
+                            Сводная таблица позволяет быстро сравнить образцы по ключевым характеристикам.
+                        </li>
+                        <li>
+                            <strong>Список:</strong> 
+                            Подходит для последовательного просмотра всех доступных данных.
+                        </li>
+                    </ul>
+                    <img src="/assets/images/ctmap_map2.png" alt="Варианты поиска данных" style="max-width: 100%; margin: 20px 0;">
+            
+                    <h3>4. Работа с данными образца</h3>
+                    <p>
+                        Выбрав интересующий образец, пользователь может:
+                    </p>
+                    <ul>
+                        <li>
+                            Ознакомиться с детальной информацией: структурные данные, визуализации, результаты анализа.
+                        </li>
+                        <li>
+                            Отправить запрос владельцу образца для получения исходных данных. Для этого предусмотрена форма обратной связи.
+                        </li>
+                    </ul>
+                    <img src="/assets/images/ctmap_map.png" alt="Вариант отображения данных" style="max-width: 100%; margin: 20px 0;">
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
