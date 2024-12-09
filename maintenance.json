@@ -12,8 +12,8 @@
                     "Нажмите кнопку 'Очистить' или 'ОК'."
                 ],
                 "images": [
-                    "/assets/images/clear_cache_step1.png",
-                    "/assets/images/clear_cache_step2.png"
+                    "/ietr/assets/images/clear_cache_step1.png",
+                    "/ietr/assets/images/clear_cache_step2.png"
                 ]
             }
         },
@@ -29,7 +29,7 @@
                     "Перезапустите браузер после установки обновленных плагинов."
                 ],
                 "images": [
-                    "/assets/images/update_extension_step1.png"
+                    "/ietr/assets/images/update_extension_step1.png"
                 ]
             }
         },
@@ -45,7 +45,7 @@
                     "После установки перезапустите браузер."
                 ],
                 "images": [
-                    "/assets/images/update_browser_step1.png"
+                    "/ietr/assets/images/update_browser_step1.png"
                 ]
             }
         },
